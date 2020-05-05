@@ -1,24 +1,28 @@
 
 
 print("\n\n\n")
-s=list(map(str,input("enter text to implement caesar cipher  either upper or lower case")))
+s=list(map(str,input("enter text to implement caesar cipher  either upper or lower case\n\n")))
 lis=[]
 if s[0].islower():
     for i in s:
         if i=='x' and i  in s or i=='y' and i in s or i=='z' and i in s :
             lis.append(chr(((ord(i)-25)+3)-33))
+        elif i!=" ":
+            lis.append(chr((ord(i)+3)-32))
         else:
-            lis.append(chr((ord(i)+3)-32)) 
+            lis.append(" ") 
     lis=''.join(lis)
-    print(" casesar cipher text is \n",lis)
+    print(" \n\n####casesar cipher text is#### \n\n",lis)
 else:
     for i in s:
         if i=='X' and i  in s or i=='Y' and i in s or i=='Z' and i in s :
             lis.append(chr((ord(i)+3)+6))
-        else:
+        elif i!=" ":
             lis.append(chr((ord(i)+3)+32)) 
+        else:
+            lis.append(" ")
     lis=''.join(lis)
-    print(" casesar cipher text is \n",lis)
+    print(" \n\n####casesar cipher text is#### \n\n",lis)
 
 lis=list(map(str,lis))
 lis2=[]
@@ -26,22 +30,29 @@ if lis[0].isupper():
     for i in lis:
         if i=='A'  or i=='B' or i=='C'  :
             lis2.append(chr((ord(i)-26+3)+78))
-        else:
+        elif i!=" ":
             
             lis2.append(chr((ord(i)-3)+32))
+        else:
+            lis2.append(" ")
     lis2=''.join(lis2)
-    print(" decrypted cipher text is \n",lis2)
+    print(" \n\####ndecrypted cipher text is ####\n\n",lis2)
 else:
-    print("")
+    
     for i in lis:
         if i=='a'  or i=='b' or i=='c'  :
             lis2.append(chr((ord(i)-3)-26))
-        else:
-            
+        elif i!=" " :
             lis2.append(chr((ord(i)-35)))
-
+        else:
+            lis2.append(" ")
     lis2=''.join(lis2)
-    print(" decrypted cipher text is \n",lis2)
+    print(" \n\n####ndecrypted cipher text is#### \n\n",lis2,"\n\n")
+
+
+
+
+
 
 
 
