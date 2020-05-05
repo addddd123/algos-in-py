@@ -1,0 +1,32 @@
+
+
+print("\n\n\n\n\n\n")
+s=list(map(str,input("enter text to implement caesar cipher  ")))
+lis=[]
+for i in s:
+    if i=='x' and i  in s or i=='y' and i in s or i=='z' and i in s :
+        lis.append(chr(((ord(i)-25)+3)-33))
+    else:
+        lis.append(chr((ord(i)+3)-32)) 
+lis=''.join(lis)
+print(" casesar cipher text is \n",lis)
+
+lis=list(map(str,lis))
+lis2=[]
+for i in lis:
+    if i=='A'  or i=='B' or i=='C'  :
+        lis2.append(chr((ord(i)-26+3)+78))
+    else:
+        
+        lis2.append(chr((ord(i)-3)+32))
+lis2=''.join(lis2)
+print(" decrypted cipher text is \n",lis2)
+
+
+
+
+
+
+
+
+
